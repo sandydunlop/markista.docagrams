@@ -1,0 +1,3 @@
+rootProject.name = 'Docagrams'
+
+include(':markista.docagrams')

@@ -1,0 +1,25 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "type": "java",
+            "name": "Save",
+            "request": "launch",
+            "mainClass": "markista.docagrams/io.github.sandydunlop.markista.docservice.docagrams.Docagrams",
+            "projectName": "markista.docagrams"
+        },
+
+        {
+            "type": "java",
+            "name": "Load",
+            "request": "launch",
+            "mainClass": "markista.docagrams/io.github.sandydunlop.markista.docservice.docagrams.Docagrams",
+            "projectName": "markista.docagrams",
+            "args": ["../markista/api.data"]
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+/.idea
+.vscode/tasks.json
+markista.docagrams/.classpath
+markista.docagrams/.project
+markista.docagrams/.settings/org.eclipse.jdt.core.prefs
+build
+markista.docagrams/build
+markista.docagrams/bin
