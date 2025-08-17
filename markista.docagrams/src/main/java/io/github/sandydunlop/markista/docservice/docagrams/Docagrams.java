@@ -15,7 +15,11 @@ import java.io.ObjectOutputStream;
 import java.nio.file.Path;
 
 public class Docagrams implements DocService {
+    /// The API that is passed in from Markista for processing.
     Api api;
+
+    /// Context provides reporting and access to the documentation
+    /// directory.
     Context ctx;
 
     public Docagrams() {
@@ -26,17 +30,28 @@ public class Docagrams implements DocService {
         ctx = context;
     }
 
-    public void setContext(Api api, Context context) {
-        this.ctx = context;
+    /// Lets Markista know that this extension does not replace
+    /// Markista's built-int default Markdown DocService.
+    @Override
+    public boolean replacesDefault() {
+        return false;
     }
 
+    /// Called before the default DocService is run.
     @Override
-    public void run(Api api, Context context) {
+    public boolean start(Api api, Context context) {
         this.api = api;
-        setContext(context);
+        this.ctx = context;
+        return true;
+    }
+
+    /// Called after the default DocService is run.
+    @Override
+    public boolean finish() {
         ctx.reportInfo("Running Docagrams");
-        save(Path.of(ctx.getOutputDirectory(),"api.data"));
+        // save(Path.of(ctx.getOutputDirectory(),"api.data"));
         createDiagrams();
+        return true;
     }
 
     public void createDiagrams() {
@@ -70,6 +85,8 @@ public class Docagrams implements DocService {
         }
     }
 
+    /// main method for debugging only, allows the Docagrams 
+    /// extension to run without Markista.
     public static void main(String[] args) {
         Docagrams docagrams = new Docagrams();
         LocalReporter reporter = new LocalReporter();
