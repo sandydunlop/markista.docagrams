@@ -18,12 +18,12 @@ Docagrams produces three diagrams. Samples are shown below.
 
 ### Java Module Structure
 
-![](https://sandydunlop.github.io/markista/javadoc/markista/diagrams/module.svg)
+![](https://sandydunlop.github.io/markista/assets/trees/module.svg)
 
 ### Source Tree
 
-![](https://sandydunlop.github.io/markista/javadoc/markista/diagrams/source.svg)
+![](https://sandydunlop.github.io/markista/assets/trees/source.svg)
 
 ### Documentation Structure
 
-![](https://sandydunlop.github.io/markista/javadoc/markista/diagrams/docs.svg)
+![](https://sandydunlop.github.io/markista/assets/trees/docs.svg)
