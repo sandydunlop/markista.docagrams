@@ -47,7 +47,7 @@ public class ModuleTree extends AbstractTree {
     }
 
     private void addPackage(PackageNode node, TreeNode current) {
-        TreeNode treeNode = new TreeNode(NodeKind.PACKAGE, node.getQualifiedName());
+        TreeNode treeNode = new TreeNode(NodeKind.PACKAGE, node.getName());
         if (current != null) {
             current.addChild(treeNode);
             treeNode.setX(current.getX() + indent);
