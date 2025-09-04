@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import io.github.sandydunlop.markista.model.ModuleNode;
 import io.github.sandydunlop.markista.model.PackageNode;
-import io.github.sandydunlop.markista.model.TypeView;
+import io.github.sandydunlop.markista.model.TypeNode;
 
 public class ModuleTree extends AbstractTree {
     public ModuleTree() {
@@ -64,7 +64,7 @@ public class ModuleTree extends AbstractTree {
         if (node.hasPackageInfo()) {
             addType("package-info", treeNode);
         }
-        for (TypeView type : node.getTypes()) {
+        for (TypeNode type : node.getTypes()) {
             addType(type.getSimpleName(), treeNode);
         }
     }
